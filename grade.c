@@ -1,29 +1,35 @@
 #include <stdio.h>
-int main(){
+int main()
+{
+    char grade;
 
-    int marks;
+    printf("enter your grade here ['A','B','C','D','F']");
+    scanf("%c",&grade);
 
-    printf("enter the marks here: ");
-    scanf("%d",&marks);
+    switch(grade){
 
-    if (marks <= 100 && marks >= 90){
-        printf(" A grade");
-    }
+        case 'A':
+        printf("A - very good");
+        break;
 
-    else if( marks <= 89 && marks >= 80){
-        printf(" B grade");
-    }
+        case 'B':
+        printf("B - good");
+        break;
 
-    else if( marks <= 79 && marks >= 70){
-        printf(" C grade");
-    }
+        case 'C':
+        printf("C - can do much better");
+        break;
 
-    else if ( marks <= 69 && marks >= 60){
-        printf(" D grade");
-    }
+        case 'D':
+        printf("D - need to upgrade more improvement required");
+        break;
 
-    else{
-        printf(" FAIL ");
+        case 'F':
+        printf(" F - better luch next time");
+        break;
+
+        default:
+        printf("invalid");
     }
     return 0;
 }
