@@ -1,16 +1,12 @@
 #include <stdio.h>
-int main()
-{ 
-    int a,b;
+int main(){
+    int num[4];
+    int sum=(0);
 
-    printf("enter the value of a here: ");
-    scanf("%d",&a);
+    for (int i = 0; i < 4; i++){
+        scanf("%d",&num[i]);
+        sum = sum + num[i];    }
 
-    printf("enter the value of b here: ");
-    scanf("%d",&b);
-
-    int sum = a + b;
-    
-    printf("the sum of a and b is: %d\n",sum);
+    printf("%d",sum);
     return 0;
 }

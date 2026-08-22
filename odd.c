@@ -1,17 +1,15 @@
 #include <stdio.h>
-int main()
-{
-    int num;
+int main(){
+    int num[4];
+    int count = 0;
 
-    printf("enetr the number here: ");
-    scanf("%d",&num);
+    for (int i = 0; i < 4; i++){
+        scanf("%d",&num[i]);
 
-    if(num % 2==0){
-        printf("the number is even");
+        if(num[i] % 2 != 0){
+            count++;
+        }
     }
-
-    else {
-        printf("the number is odd");
-    }
-    return 0;
+        printf("odd number = %d",count);
+        return 0;
 }
